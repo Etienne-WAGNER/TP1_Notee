@@ -9,53 +9,49 @@ package tp1_notee;
  *
  * @author arcst
  */
-public class Architecte {
-    private String conseilRegional ;
-    private boolean inscriptionOrdre ;
-    private Adresse adresse ;
-    private String telephone ;
-    
-    public Architecte(String nom, String prenom, String conseilRegional, boolean inscriptionOrdre, Adresse adresse, String telephone){
-        this.nom = nom ;
-        this.prenom = prenom ;
-        this.conseilRegional = conseilRegional ;
-        this.inscriptionOrdre = inscriptionOrdre ;
-        this.adresse = adresse ;
-        this.telephone = telephone;
-    }
-    
-    private boolean telephoneValide (String telephone) {
-    }
-    
-    public void Maj_conseilRegional{
+public class Architecte extends Personne {
+  private String conseilRegional;
+  private boolean inscriptionOrdre;
+  private Adresse adresse;
+  private String telephone;
+
+  public Architecte(String nom, String prenom, String conseilRegional, boolean inscriptionOrdre, Adresse adresse, String telephone) {
+    super(nom, prenom);
+
+    this.conseilRegional = conseilRegional;
+    this.inscriptionOrdre = inscriptionOrdre;
+    this.adresse = adresse;
+
+    if (telephoneValide(telephone)) {
+      this.telephone = telephone;
     }
 
-    public String  getConseilRegional {
+    else {
+      this.telephone = "";
     }
+    Maj_conseilRegional();
+  }
 
-    public void setConseilRegional(String conseilRegional) {
-    }
+  private boolean telephoneValide(String telephone) {}
 
-    public boolean isIncriptionOrdre {
-    }
-    
-    public void setInscriptionOrdre(boolean inscriptionOrdre){
-    }
-    
-    public Adresse adresse {
-    }
-    
-    public void setAdresse(Adresse adresse) {
-    }
-    
-    public String getTelephone {
-    }
-    
-    public void setTelephone (String telephone) {
-    }
-    
-    public String toString{
-    }
-    
-    
+  public void Maj_conseilRegional {}
+
+  public String getConseilRegional {}
+
+  public void setConseilRegional(String conseilRegional) {}
+
+  public boolean isIncriptionOrdre {}
+
+  public void setInscriptionOrdre(boolean inscriptionOrdre) {}
+
+  public Adresse adresse {}
+
+  public void setAdresse(Adresse adresse) {}
+
+  public String getTelephone {}
+
+  public void setTelephone(String telephone) {}
+
+  public String toString {}
+
 }

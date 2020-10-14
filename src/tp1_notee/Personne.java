@@ -9,22 +9,20 @@ package tp1_notee;
  *
  * @author arcst
  */
-public class Personne {
-    private String nom ;
-    private String prenom ;
-    
-    public Personne (String nom, String prenom) {
-        this.nom = nom ;
-        this.prenom = prenom ;
-        
-    }
-    
-    private String validate (String chaine, integrer Taille) {  
-        
-    }
+public abstract class Personne {
+  private String nom;
+  private String prenom;
 
-    private String toString {
-    
-    }
-    
+  public Personne(String nom, String prenom) {
+    this.nom = validate(nom, 50);
+    this.prenom = validate(prenom, 30);
+
+  }
+  private String validate(String chaine, Integer taille) {
+
+    return chaine;
+  }
+  public String toString() {
+    return this.nom + " " + this.prenom;
+  }
 }
