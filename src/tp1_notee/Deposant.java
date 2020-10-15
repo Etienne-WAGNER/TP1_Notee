@@ -19,5 +19,7 @@ public class Deposant extends Personne {
     this.adresse = adresse;
   }
 
-  public void stocker(Connection connexion) {}
+  public String toString() {
+    return super.toString() + " " + this.adresse;
+  }
 }

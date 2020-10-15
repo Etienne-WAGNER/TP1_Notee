@@ -32,9 +32,17 @@ public class Architecte extends Personne {
     Maj_conseilRegional();
   }
 
-  private boolean telephoneValide(String telephone) {}
+  private boolean telephoneValide(String telephone) {
+      boolean b = true ;
+      return b;
+      
+  }
 
-  public void Maj_conseilRegional {}
+  public void Maj_conseilRegional() {
+    if (this.getConseilRegional() == null){
+        this.setConseilRegional("Conseil regional non renseigne");
+    }
+  }
 
   public String getConseilRegional {}
 
@@ -52,6 +60,15 @@ public class Architecte extends Personne {
 
   public void setTelephone(String telephone) {}
 
-  public String toString {}
+  public String toString() {
+  
+    String chaine = "";
+    chaine = chaine + this.conseilRegional + " ";
+  
+    if (this.inscriptionOrdre) chaine = chaine + "inscrit";
+        else chaine = chaine + "pas inscrit";
+        chaine = chaine + " " + this.telephone;
+    return chaine;
 
+}
 }
